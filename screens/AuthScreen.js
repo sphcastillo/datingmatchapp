@@ -4,11 +4,9 @@ import { useNavigation } from '@react-navigation/native';
 
 const image = { uri: "https://tinder.com/static/tinder.png" }
 
-const LoginScreen = () => {
-
+const AuthScreen = () => {
 
     const navigation = useNavigation();
-
 
     useLayoutEffect(() => {
         navigation.setOptions({
@@ -23,8 +21,19 @@ const LoginScreen = () => {
                 style={styles.image}
                 resizeMode="cover"
             >
-                <TouchableOpacity style={styles.touchButton}>
+                <TouchableOpacity 
+                    style={styles.touchButton}
+                    onPress={() => navigation.navigate("SignIn")}
+                >
                     <Text style={styles.text}>Sign in & get swiping</Text>
+                </TouchableOpacity>
+                
+
+                <TouchableOpacity 
+                    style={styles.touchRegisterButton}
+                    onPress={() => navigation.navigate("Register")}
+                >
+                    <Text style={styles.registerButton}>Register here</Text>
                 </TouchableOpacity>
             </ImageBackground>
 
@@ -32,7 +41,7 @@ const LoginScreen = () => {
     )
 }
 
-export default LoginScreen;
+export default AuthScreen;
 
 const styles = StyleSheet.create({
     container: {
@@ -43,10 +52,10 @@ const styles = StyleSheet.create({
     },
     touchButton: {
         position: "absolute",
-        width: 52,
-        bottom: 40,
+        width: 212,
+        bottom: 140,
         backgroundColor: "white",
-        padding: 4,
+        padding: 8,
         marginHorizontal: "25%",
         borderRadius: "25px",
     },
@@ -56,4 +65,21 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       fontWeight: 'bold',
     },
+    touchRegisterButton: {
+        position: "absolute",
+        width: 212,
+        bottom: 40,
+        padding: 4,
+        marginHorizontal: "25%",
+        borderRadius: "25px",
+        borderColor: "white",
+        borderWidth: 1
+    },
+    registerButton: {
+        color: "white",
+        fontSize: 18,
+        textAlign: 'center',
+        fontWeight: 'bold',
+        fontStyle: "italic"
+    }
   });

@@ -2,22 +2,19 @@ import { View, Text } from 'react-native'
 import React, { useState } from 'react'
 import HomeScreen from './screens/HomeScreen';
 import ChatScreen from './screens/ChatScreen';
-import LoginScreen from './screens/LoginScreen';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ModalScreen from './screens/ModalScreen';
-import LoadingScreen from "./screens/LoadingScreen"
+import AuthScreen from './screens/AuthScreen';
+import RegisterScreen from './screens/RegisterScreen';
+import SignInScreen from './screens/SignInScreen';
+
 
 const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
 
-    const user = true;
+    const user = false;
     console.log("user: ", user)
-    const [loading, setLoading] = useState(true);
-
-    // if(state.isLoading){
-    //     return <LoadingScreen />
-    // }
 
     return (
         <Stack.Navigator
@@ -38,11 +35,16 @@ const StackNavigator = () => {
                 </>
 
             ) : (
-                <Stack.Screen 
-                    name="Login" 
-                    component={LoginScreen}
-                    // options={{ headerShown: false}}
-                />
+                <Stack.Group>
+                    <Stack.Screen 
+                        name="Auth" 
+                        component={AuthScreen}
+                        // options={{ headerShown: false}}
+                    />
+                    <Stack.Screen name="SignIn" component={SignInScreen}/>
+                    <Stack.Screen name="Register" component={RegisterScreen}/>
+                </Stack.Group>
+
             )}
 
             
