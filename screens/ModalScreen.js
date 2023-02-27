@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native'
 import React, { useLayoutEffect, useState} from 'react'
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native';
+import { setDoc } from "firebase/firestore";
 
 const ModalScreen = () => {
     // const { user } = useAuth();
@@ -9,13 +10,23 @@ const ModalScreen = () => {
     const [occupation, setOccupation] = useState(null);
     const [age, setAge] = useState(null);
 
+    const navigation= useNavigation();
     const incompleteForm = !image || !occupation || !age;
 
-    const navigation= useNavigation();
+    //updates the user profile
+
+    const updateUserProfile = () => {
+         setDoc(doc(db, "users"))
+    }
+
+
 
     // useLayoutEffect(() => {
     //     navigation.setOptions({
-    //       headerShown: false,
+    //         headerShown: true,
+    //         headTitle: "Update your profile",
+    //         headerStyle: { backgroundColor: "#FF5864" },
+    //         headerTitleStyle: { color: "white" },
     //     })
     //   }, [])
 
@@ -50,9 +61,17 @@ const ModalScreen = () => {
                     onChangeText={text => setAge(text)}
                     style={styles.input}
                     placeholder="Enter your age"
+                    maxLength={2}
+                    keyboardType="numeric"
                 />
 
-                <TouchableOpacity style={styles.updateProfileWrapper}>
+                <TouchableOpacity 
+                    disabled={incompleteForm}
+                    style={[
+                        styles.updateProfileWrapper,
+                        incompleteForm ? { backgroundColor: "gray" } : { backgroundColor: "#FF7F7F" }
+                    ]}
+                >
                     <Text style={styles.updateProfileButton}>Update Profile</Text>
                 </TouchableOpacity>
             </View>
