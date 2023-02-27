@@ -7,6 +7,7 @@ import ModalScreen from './screens/ModalScreen';
 import AuthScreen from './screens/AuthScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import SignInScreen from './screens/SignInScreen';
+import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -39,10 +40,22 @@ const StackNavigator = () => {
                     <Stack.Screen 
                         name="Auth" 
                         component={AuthScreen}
-                        // options={{ headerShown: false}}
                     />
-                    <Stack.Screen name="SignIn" component={SignInScreen}/>
-                    <Stack.Screen name="Register" component={RegisterScreen}/>
+                    <Stack.Screen 
+                        name="SignIn" 
+                        component={SignInScreen}
+                        options={{ headerShown: true}}
+                    />
+                    <Stack.Screen 
+                        name="Register" 
+                        component={RegisterScreen}
+                        options={{ headerShown: true}}
+                    />
+                    <Stack.Screen 
+                        name="ForgotPassword" 
+                        component={ForgotPasswordScreen} 
+                        options={{ headerShown: true}}
+                    />
                 </Stack.Group>
 
             )}

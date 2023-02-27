@@ -5,7 +5,6 @@ import { useNavigation } from '@react-navigation/native';
 const image = { uri: "https://tinder.com/static/tinder.png" }
 
 const AuthScreen = () => {
-
     const navigation = useNavigation();
 
     useLayoutEffect(() => {
@@ -25,7 +24,7 @@ const AuthScreen = () => {
                     style={styles.touchButton}
                     onPress={() => navigation.navigate("SignIn")}
                 >
-                    <Text style={styles.text}>Sign in & get swiping</Text>
+                    <Text style={styles.text}>Sign in & start SWIPING</Text>
                 </TouchableOpacity>
                 
 
@@ -53,7 +52,7 @@ const styles = StyleSheet.create({
     touchButton: {
         position: "absolute",
         width: 212,
-        bottom: 140,
+        bottom: 150,
         backgroundColor: "white",
         padding: 8,
         marginHorizontal: "25%",
@@ -68,18 +67,18 @@ const styles = StyleSheet.create({
     touchRegisterButton: {
         position: "absolute",
         width: 212,
-        bottom: 40,
-        padding: 4,
+        bottom: 70,
+        padding: 10,
         marginHorizontal: "25%",
         borderRadius: "25px",
         borderColor: "white",
-        borderWidth: 1
+        borderWidth: 3
     },
     registerButton: {
         color: "white",
         fontSize: 18,
         textAlign: 'center',
         fontWeight: 'bold',
-        fontStyle: "italic"
+        // fontStyle: "italic"
     }
   });
