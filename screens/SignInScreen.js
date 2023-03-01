@@ -16,7 +16,7 @@ const SignInScreen = () => {
             resizeMode="contain"
             source={require("../assets/logo.png")}
             />
-            <Text>Login</Text>
+            <Text style={styles.title}>Login</Text>
             <View style={styles.inputContainer}>
                 <View style={styles.emailInputContainer}>
                     <TextInput 
@@ -61,6 +61,12 @@ const styles = StyleSheet.create({
         maxWidth: 300,
         height: 100,
         width: "60%"
+    },
+    title: {
+        fontSize: 19,
+        fontWeight: 'bold',
+        paddingTop: 15,
+        textAlign: 'center'
     },
     inputContainer: {
         paddingTop: 25,

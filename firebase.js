@@ -1,13 +1,21 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import { getAuth } from "firebase/auth";
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
 
 const firebaseConfig = {
-    // Your Firebase credentials
+    apiKey: "AIzaSyAt6ai0U6pW6R_O1Tipd5_K-K2iS7H0kZI",
+    authDomain: "tinderdatingapp-8795d.firebaseapp.com",
+    databaseURL: "https://tinderdatingapp-8795d-default-rtdb.firebaseio.com",
+    projectId: "tinderdatingapp-8795d",
+    storageBucket: "tinderdatingapp-8795d.appspot.com",
+    messagingSenderId: "948270443930",
+    appId: "1:948270443930:web:f383a9c476001807f31e23"
+  };
+
+if(!firebase.apps.length){
+    firebase.initializeApp(firebaseConfig);
 }
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth();
-const db = getFirestore();
+const auth = firebase.auth();
 
-export { auth, db };
+export { firebase, auth }

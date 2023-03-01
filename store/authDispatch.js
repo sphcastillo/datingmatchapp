@@ -1,45 +1,53 @@
-// import { auth, db, firebase } 
+import { auth, db, firebase } from "../firebase";
 
-const registerUser = async(req, res) => {
+export const registerUser = async(req, res) => {
+    console.log("inside the zone")
+    // console.log("hello", firstName)
+    // console.log("world", lastName)
+    // console.log("its", email)
+    // console.log("sophia", password)
+
     const { firstName, lastName, email, password } = req.body;
     console.log("rq.body: ", req.body)
 
-    try {
-        const userAuth = await auth.createUserWithEmailAndPassword(email, password);
+    // try {
+    //     const userAuth = await auth.createUserWithEmailAndPassword(email, password);
 
-        await userAuth.user.updateProfile({
-            firstName: firstName,
-            lastName: lastName,
-            email: email,
-            displayName: firstName
-        })
+    //     await userAuth.user.updateProfile({
+    //         firstName: firstName,
+    //         lastName: lastName,
+    //         email: email,
+    //         displayName: firstName
+    //     })
 
-        const payload = {
-            firstName, 
-            lastName,
-            email,
-            displayName: firstName,
-            uid: firebase.auth().currentUser.uid,
-        };
+    //     const payload = {
+    //         firstName, 
+    //         lastName,
+    //         email,
+    //         displayName: firstName,
+    //         uid: firebase.auth().currentUser.uid,
+    //     };
 
-        await firebase
-            .firestore()
-            .collection('users')
-            .doc(firebase.auth().currentUser.uid)
-            .set({
-                ...payload,
-                createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-                updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+    //     await firebase
+    //         .firestore()
+    //         .collection('users')
+    //         .doc(firebase.auth().currentUser.uid)
+    //         .set({
+    //             ...payload,
+    //             createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+    //             updatedAt: firebase.firestore.FieldValue.serverTimestamp()
                 
-            })
+    //         })
             
-    } catch(error){
-        console.log("User signup error: ", error)
-        res.status(500).json({ message: "User signup error"});
-    }
+    // } catch(error){
+    //     console.log("User signup error: ", error)
+    //     res.status(500).json({ message: "User signup error"});
+    // }
 }
 
-const loginUser = async(req, res) => {
+
+
+export const loginUser = async(req, res) => {
     const { email, password } = req.body;
     console.log("rq.body: ", req.body)
 
@@ -67,4 +75,7 @@ const loginUser = async(req, res) => {
     }
 }
 
-export default loginUser;
+export const logoutUser = async dispatch => {
+
+    
+}
