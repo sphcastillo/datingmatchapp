@@ -29,6 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:948270443930:ios:2124dd5c2c3a3c08f31e23</string>
+	<string>1:948270443930:ios:00150184c14c807cf31e23</string>
+	<key>DATABASE_URL</key>
+	<string>https://tinderdatingapp-8795d-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>

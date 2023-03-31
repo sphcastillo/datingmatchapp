@@ -6,9 +6,11 @@ export const registerUser = async(req, res) => {
     // console.log("world", lastName)
     // console.log("its", email)
     // console.log("sophia", password)
-
-    const { firstName, lastName, email, password } = req.body;
+    const { data } = req.body;
     console.log("rq.body: ", req.body)
+
+    // const { firstName, lastName, email, password } = req.body;
+    // console.log("rq.body: ", req.body)
 
     // try {
     //     const userAuth = await auth.createUserWithEmailAndPassword(email, password);

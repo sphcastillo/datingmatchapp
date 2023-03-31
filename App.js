@@ -1,13 +1,14 @@
-import { Provider } from 'react-redux';
+import { AuthProvider } from './hooks/useAuth'
 import RootNavigation from './RootNavigation';
-import { store } from './store/index';
+
 
 
 export default function App() {
   return (
-    <Provider store={store}>
+    <AuthProvider>
       <RootNavigation/>
-    </Provider>
+    </AuthProvider>
+      
 
   );
 }

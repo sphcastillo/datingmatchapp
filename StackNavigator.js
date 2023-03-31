@@ -8,14 +8,15 @@ import AuthScreen from './screens/AuthScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import SignInScreen from './screens/SignInScreen';
 import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
+import useAuth from './hooks/useAuth';
 
 
 const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
 
-    const user = false;
-    console.log("user: ", user)
+    const { user } = useAuth();
+    console.log("user", user)
 
     return (
         <Stack.Navigator

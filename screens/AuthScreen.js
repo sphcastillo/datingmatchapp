@@ -1,10 +1,14 @@
 import { View, Text, TouchableOpacity, ImageBackground, StyleSheet } from 'react-native';
 import React, { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native';
+import useAuth from '../hooks/useAuth';
 
 const image = { uri: "https://tinder.com/static/tinder.png" }
 
 const AuthScreen = () => {
+
+    const { user } = useAuth;
+    console.log("user", user)
     const navigation = useNavigation();
 
     useLayoutEffect(() => {

@@ -1,13 +1,14 @@
 {
   "project_info": {
     "project_number": "948270443930",
+    "firebase_url": "https://tinderdatingapp-8795d-default-rtdb.firebaseio.com",
     "project_id": "tinderdatingapp-8795d",
     "storage_bucket": "tinderdatingapp-8795d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:948270443930:android:72eeb5b8b54f18f1f31e23",
+        "mobilesdk_app_id": "1:948270443930:android:3240864e006defb8f31e23",
         "android_client_info": {
           "package_name": "host.exp.exponent"
         }

@@ -192,10 +192,10 @@ const styles = StyleSheet.create({
   },
   swiperViewWrapper: {
     flex: 1,
-    marginTop: -6,
+    marginTop: -30,
   },
   cardWrapper: {
-    height: 660,
+    height: 600,
     backgroundColor: "#FF5864",
     borderRadius: "25px",
   },

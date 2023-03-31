@@ -9,6 +9,7 @@ import {
 } from 'react-native'
 import React, { useState } from 'react';
 import { registerUser } from '../store/authDispatch';
+import { registerUserWithFirebase } from '../firebase/authSetup';
 
 const RegisterScreen = () => {
     const [firstName, setFirstName] = useState('');
@@ -16,14 +17,13 @@ const RegisterScreen = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const handleRegistration = (firstName, lastName, email, password) => {
-        console.log("Let's handle registration")
-        console.log("First name: ", firstName)
-        console.log("Last name: ", lastName)
-        console.log("Email: ", email)
-        console.log("Password: ", password)
+    const handleRegistration = () => {
 
-        registerUser(firstName, lastName, email, password)
+        registerUserWithFirebase(firstName, lastName, email, password)
+
+
+        // registerUser(firstName, lastName, email, password)
+
     }
     return (
         <SafeAreaView>
