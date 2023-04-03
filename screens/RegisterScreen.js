@@ -8,8 +8,7 @@ import {
     Pressable, 
 } from 'react-native'
 import React, { useState } from 'react';
-import { registerUser } from '../store/authDispatch';
-import { registerUserWithFirebase } from '../firebase/authSetup';
+
 
 const RegisterScreen = () => {
     const [firstName, setFirstName] = useState('');
@@ -17,14 +16,7 @@ const RegisterScreen = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const handleRegistration = () => {
 
-        registerUserWithFirebase(firstName, lastName, email, password)
-
-
-        // registerUser(firstName, lastName, email, password)
-
-    }
     return (
         <SafeAreaView>
             <View style={styles.root}>
@@ -73,7 +65,6 @@ const RegisterScreen = () => {
             </View>
             <Pressable 
                 style={styles.buttonContainer}
-                onPress={() => handleRegistration(firstName, lastName, email, password)}
             >
                 <Text style={styles.signinButton}>Sign-in</Text>
             </Pressable>

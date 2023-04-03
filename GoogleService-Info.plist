@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>948270443930-u1n0spmm411rlhthsi2cja7lpl63kiaq.apps.googleusercontent.com</string>
+	<string>866592919874-ls61271nefua0c1v7v5997chd556di5l.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.948270443930-u1n0spmm411rlhthsi2cja7lpl63kiaq</string>
+	<string>com.googleusercontent.apps.866592919874-ls61271nefua0c1v7v5997chd556di5l</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDdceMXlONETRG4l0iwng9aW5RSDO2rPh4</string>
+	<string>AIzaSyD_sMpZZD5Nf3xTH1_esS7JPLslWS_jhTk</string>
 	<key>GCM_SENDER_ID</key>
-	<string>948270443930</string>
+	<string>866592919874</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>host.exp.exponent</string>
 	<key>PROJECT_ID</key>
-	<string>tinderdatingapp-8795d</string>
+	<string>hingewithmate</string>
 	<key>STORAGE_BUCKET</key>
-	<string>tinderdatingapp-8795d.appspot.com</string>
+	<string>hingewithmate.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:948270443930:ios:00150184c14c807cf31e23</string>
-	<key>DATABASE_URL</key>
-	<string>https://tinderdatingapp-8795d-default-rtdb.firebaseio.com</string>
+	<string>1:866592919874:ios:39c0956441923c979eb8db</string>
 </dict>
 </plist>

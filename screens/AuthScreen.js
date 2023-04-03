@@ -8,7 +8,7 @@ const image = { uri: "https://tinder.com/static/tinder.png" }
 const AuthScreen = () => {
 
     const { user } = useAuth;
-    console.log("user", user)
+
     const navigation = useNavigation();
 
     useLayoutEffect(() => {
